@@ -1,20 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import Homepage from './Pages/Homepage'
 import SearchCourse from './Pages/SearchCourse'
-import Dummy from './Pages/Dummy'
+import Dummy from './Pages/Homepage'
 import SearchExperts from './Pages/SearchExperts'
 import SeminarBootCamp from './Pages/SeminarBootCamp'
+import Layout from './Pages/Layout'
+import Homepage from './Pages/Homepage'
 
 function App() {
  
 
   return (
     <Routes>
-      <Route element={<Homepage/>} >
-        <Route index element={<Dummy/>}></Route>
+      <Route element={<Layout/>} >
+        <Route index element={<Homepage/>}></Route>
         <Route path='/seminarbootcamp' element={<SeminarBootCamp/>}></Route>
         <Route path='/searchcourses' element={<SearchCourse/>}></Route>
         <Route path='/searchexperts' element={<SearchExperts/>}></Route>

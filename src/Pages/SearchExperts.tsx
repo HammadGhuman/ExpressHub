@@ -55,7 +55,7 @@ const SearchExperts = (props: Props) => {
       <div className="mr-24 w-full">
         <h1 className="text-5xl text-center font-semibold mt-3">Search Experts</h1>
         <div className="flex flex-col justify-center items-center w-full  space-x-5 mt-9">
-          <div className="bg-gray-300 min-w-[90vw] md:min-w-[500px] px-3 py-4 ml-2 rounded-lg">
+          <div className="bg-gradient-to-r from-cyan-500 to bg-blue-500 min-w-[90vw] md:min-w-[500px] px-3 py-4 ml-2 rounded-lg">
           <form className="flex flex-col gap-4">
           <div>
             <div className="mb-2 block">
@@ -92,7 +92,7 @@ const SearchExperts = (props: Props) => {
             </div>
             <TextInput id="Experience" type="number" required={true} placeholder="5" />
           </div>
-          <Button type="submit">Submit</Button>
+          <Button className="bg-gradient-to-r from-violet-500 to-purple-800-500 hover:bg-gradient-to-l transition hover:scale-100 scale-95" type="submit">Submit</Button>
         </form>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-3 mt-3">

@@ -3,10 +3,10 @@ type Props = {};
 
 const SeminarBootCamp = (props: Props) => {
   return (
-    <div className="w-full pr-5">
-    <h1 className="text-5xl text-center font-semibold mt-3">Seminar Bootcamp</h1>
-    <div className="flex flex-row space-x-5 mt-9">  
-      <div className="bg-gray-300 w-full px-3 py-4 ml-2 rounded-lg">
+    <div className="lg:w-[80vw] lg:mx-[30px] w-[100vw]  pr-5 ">
+    <h1 className="text-5xl text-cyan-500 text-center font-semibold mt-3">Seminar Bootcamp</h1>
+    <div className="flex flex-col lg:flex-row  lg:space-x-5 lg:space-y-0 space-y-5 mt-9">  
+      <div className="bg-gradient-to-r from-cyan-500 to bg-blue-500 w-full  px-3 py-4 ml-2 rounded-lg">
         <form className="flex flex-col gap-4">
           <div>
             <div className="mb-2 block">
@@ -33,28 +33,28 @@ const SeminarBootCamp = (props: Props) => {
             </div>
             <TextInput id="seminar" type="date" required={true} />
           </div>
-          <Button type="submit">Submit</Button>
+          <Button className="bg-gradient-to-r from-violet-500 to-purple-800-500 hover:bg-gradient-to-l transition hover:scale-100 scale-95" type="submit">Submit</Button>
         </form>
       </div>
     <div className="w-full relative"> 
 
    
-        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+        <div className="h-56 sm:h-64 xl:h-[320px] 2xl:h-96 ">
   <Carousel slideInterval={5000}>
     <img
-      src="https://images.pexels.com/photos/4763639/pexels-photo-4763639.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+      src="https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=600"
       alt="..."
     />
     <img
-      src="https://images.pexels.com/photos/6858664/pexels-photo-6858664.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+      src="https://images.pexels.com/photos/8199610/pexels-photo-8199610.jpeg?auto=compress&cs=tinysrgb&w=600"
       alt="..."
     />
     <img
-      src="https://images.pexels.com/photos/15733527/pexels-photo-15733527.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+      src="https://images.pexels.com/photos/5428148/pexels-photo-5428148.jpeg?auto=compress&cs=tinysrgb&w=600"
       alt="..."
     />
     <img
-      src="https://images.pexels.com/photos/13742140/pexels-photo-13742140.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+      src="https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=600"
       alt="..."
     />
   </Carousel>
