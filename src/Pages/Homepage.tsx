@@ -41,8 +41,8 @@ const Homepage = (props: Props) => {
   })
   const currentUrl = window.location.href;
   return (
-    <>
-      <Navbar fluid={true} rounded={true} className="bg-green-300 " >
+    <div className="overflow-x-hidden max-w-[100vw] ">
+      <Navbar fluid={true} rounded={true} className="bg-green-300  absolute w-full z-[10]" >
         <Navbar.Brand href="https://flowbite.com/">
           <img
             src="https://flowbite.com/docs/images/logo.svg"
@@ -50,7 +50,7 @@ const Homepage = (props: Props) => {
             alt="Flowbite Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Flowbite
+            Expert Hub
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
@@ -78,22 +78,23 @@ const Homepage = (props: Props) => {
           </Dropdown>
           <Navbar.Toggle />
         </div>
-        <Navbar.Collapse className="md:hidden">
-          <Navbar.Link href="/navbars" active={true}>
+        <Navbar.Collapse className="lg:hidden">
+          <Navbar.Link href="/seminarbootcamp" active={true}>
             Seminar Bootcamp
           </Navbar.Link>
-          <Navbar.Link href="/navbars">Search Course</Navbar.Link>
-          <Navbar.Link href="/navbars">Search Experts</Navbar.Link>
+          <Navbar.Link href="/searchcourses">Search Course</Navbar.Link>
+          <Navbar.Link href="/searchexperts">Search Experts</Navbar.Link>
           <Navbar.Link href="/navbars">Teachers</Navbar.Link>
           <Navbar.Link href="/navbars">Courses</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
       <div className="w-full flex min-h-screen ">
-        <Sidebar className="border-r-2 border-r-green-300 "
-          hidden={windowDimensions.width <= 500 ? true : false}
+        <Sidebar className="border-r-2 border-r-green-300 fixed"
+          hidden={windowDimensions.width <= 1100 ? true : false}
           aria-label="Default sidebar example"      
         >
-          <Sidebar.Items className="min-h-screen px-0 py-0">
+            <Sidebar.Logo href="/" img={"https://flowbite.com/docs/images/logo.svg"}>Expert Hub</Sidebar.Logo>
+          <Sidebar.Items className="min-h-screen">
             <Sidebar.ItemGroup>
               <Sidebar.Item className={`${currentUrl.split('/')[3] === 'seminarbootcamp' && 'bg-green-300'}`} href="/seminarbootcamp" icon={HiChartPie} onClick={()=>{setActive({
                 selectCourse:false,selectExpert:false,seminar:true
@@ -123,9 +124,11 @@ const Homepage = (props: Props) => {
             </Sidebar.ItemGroup>
           </Sidebar.Items>
         </Sidebar>
-        <Outlet></Outlet>
+        <div className="absolute top-[62px] lg:left-[240px]  md:max-w-max max-w-[100vw] ">
+        <Outlet/>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

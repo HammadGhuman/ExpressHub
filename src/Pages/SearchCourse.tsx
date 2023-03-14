@@ -49,7 +49,7 @@ const SearchCourse = (props: Props) => {
     <div className="mr-24 w-full">
       <h1 className="text-5xl text-center font-semibold mt-3">Search Course</h1>
       <div className="flex flex-col justify-center items-center w-full  space-x-5 mt-9">
-        <div className="bg-gray-300 min-w-[500px] px-3 py-4 ml-2 rounded-lg">
+        <div className="bg-gray-300 min-w-[90vw] md:min-w-[500px] px-3 py-4 ml-2 rounded-lg">
           <form className="flex flex-col gap-4">
             <div>
               <div className="mb-2 block">
